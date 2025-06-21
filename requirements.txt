@@ -1,5 +1,5 @@
-﻿fastapi
-uvicorn[standard]
-tensorflow
-numpy
-pillow
+﻿fastapi==0.115.13
+uvicorn[standard]==0.34.3
+numpy==2.0.2
+pillow==11.2.1
+tensorflow==2.19.0
