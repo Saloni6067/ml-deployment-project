@@ -1,0 +1,49 @@
+swagger: '2.0'
+info:
+  title: MNIST Prediction API
+  description: A wrapper around your Cloud Run MNIST service that enforces an API key.
+  version: 1.0.0
+
+host: superb-ethos-462618-k3.endpoints.superb-ethos-462618-k3.cloud.goog
+schemes:
+  - https
+
+security:
+  - api_key: []
+
+paths:
+  /predict-image:
+    post:
+      operationId: predictImage
+      summary: Predict digit from raw image bytes
+      consumes:
+        - application/octet-stream
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: file
+          description: Raw PNG or JPEG image bytes (28×28 grayscale)
+          required: true
+          schema:
+            type: string
+            format: binary
+      responses:
+        '200':
+          description: prediction result
+          schema:
+            type: object
+            properties:
+              prediction:
+                type: integer
+
+x-google-backend:
+  address: https://mnist-service-787869786822.us-central1.run.app
+  path_translation: APPEND_PATH_TO_ADDRESS
+  deadline: 30
+
+securityDefinitions:
+  api_key:
+    type: apiKey
+    in: query
+    name: key

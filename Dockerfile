@@ -15,4 +15,4 @@ COPY app/ ./app
 EXPOSE 8080
 
 # Start Uvicorn, pointing at app/main.py
-CMD ["bash", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--lifespan", "on"]
