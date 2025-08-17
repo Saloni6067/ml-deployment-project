@@ -1,3 +1,4 @@
+Read the **ML-Deployment-Project-Saloni** file for project details
 # MNIST Digit Prediction API (FastAPI + TensorFlow)
 
 This project deploys a TensorFlow-trained digit classification model (based on the MNIST dataset) using a FastAPI web server. The server accepts image files via POST requests and returns the predicted digit.
