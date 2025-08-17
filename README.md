@@ -10,6 +10,10 @@ This project deploys a TensorFlow-trained digit classification model (based on t
 - Docker container for environment consistency.
 - Accepts image file uploads and responds with prediction as JSON.
 
+## Project Architecture
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4783c815-0fc0-4eaa-8df9-237de21b5706" />
+
+
 Make sure you have the following installed:
 
 - Python 3.9
