@@ -47,7 +47,8 @@ digit.png is a sample test image which is fetched using get_image.py. You can re
 
 ## To run using GCP
 ```bash 
-curl.exe -X POST -F "file=@digit.png" "https://mnist-gateway-a1xxbu86.uc.gateway.dev/predict-image?key=AIzaSyAKrnknzBkcjyn5b0_Os9d73fC8AboTwoI”
+curl.exe -X POST -F "file=@digit.png" "https://mnist-gateway-a1xxbu86.uc.gateway.dev/predict-image?key=$your_key”
 ```
+Replace $your_key with your gcp access key 
 
 
